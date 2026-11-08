@@ -1,0 +1,84 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #8fd3ff 0%, #dff7ff 47%, #74d680 100%);
+  background-attachment: fixed;
+  color: #15364a;
+}
+#root { width: 100%; }
+.app-container {
+  width: min(96%, 1120px);
+  margin: 36px auto;
+  padding: clamp(16px, 3vw, 34px);
+  border-radius: 28px;
+  background: rgba(255,255,255,.38);
+  border: 1px solid rgba(255,255,255,.65);
+  box-shadow: 0 15px 40px rgba(0,80,130,.24);
+}
+.page-header { text-align: center; padding-bottom: 8px; }
+.title { margin: 0 0 6px; color: #075985; font-size: clamp(2rem, 5vw, 2.8rem); }
+.page-header p, .muted, .hint { color: #486b7c; }
+.section-title { font-size: 1.45rem; margin: 32px 0 15px; color: #075985; }
+.forms-container { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.card {
+  min-width: 0;
+  border-radius: 22px;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,.91), rgba(220,248,255,.78));
+  box-shadow: 0 8px 24px rgba(0,100,160,.13), inset 0 1px 2px white;
+}
+.card h3 { color: #0b6fa4; font-size: 1.25rem; margin: 0 0 18px; }
+.card h4 { margin: 0 0 8px; font-size: 1.05rem; color: #174b6a; }
+.card-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.card-header h3 { margin: 0; }
+label { display: block; margin: 13px 0 4px; font-weight: 600; font-size: .96rem; }
+input, select, textarea {
+  display: block; width: 100%; min-width: 0;
+  padding: 11px 12px; margin-top: 7px;
+  border-radius: 12px; border: 1px solid rgba(0,120,180,.3);
+  background: rgba(255,255,255,.84); color: #123c56;
+  font-size: 1rem; font-family: inherit;
+}
+textarea { resize: vertical; }
+input:focus, select:focus, textarea:focus { outline: 3px solid rgba(44,167,224,.25); border-color: #2ca7e0; }
+button {
+  border: none; border-radius: 12px; padding: 11px 16px;
+  background: linear-gradient(180deg, #4fd1ff, #1995d3);
+  color: white; font-size: .96rem; font-weight: bold; cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,100,160,.19);
+}
+form > button { width: 100%; margin-top: 18px; }
+button:hover:not(:disabled) { filter: brightness(1.06); }
+button:disabled { cursor: not-allowed; opacity: .55; }
+button.secondary { color: #0b5a85; background: #e5f7ff; border: 1px solid #a8dbf2; box-shadow: none; }
+button.danger { color: #a12c3d; background: #ffe5e7; border: 1px solid #f5afb9; box-shadow: none; }
+button.button-inline { white-space: nowrap; padding: 8px 12px; font-size: .87rem; }
+.button-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.button-row button { flex: 1; }
+.message { margin-top: 14px; padding: 12px; border-radius: 11px; color: #075985; background: #d6f3ff; overflow-wrap: anywhere; }
+.hint { font-size: .87rem; margin: 9px 0 13px; line-height: 1.5; }
+.muted { line-height: 1.45; margin: 10px 0; }
+.project-selector { max-width: 680px; margin: auto; }
+.item-list { display: grid; gap: 12px; max-height: 470px; overflow-y: auto; }
+.project-item { padding: 15px; border-radius: 14px; background: rgba(255,255,255,.7); border: 1px solid #d5edf7; }
+.project-item p { margin: 7px 0; overflow-wrap: anywhere; line-height: 1.45; }
+.member-item button { margin-top: 8px; }
+.chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.chip { display: inline-block; padding: 4px 9px; border-radius: 99px; background: #dceef9; color: #245275; font-size: .8rem; font-weight: 600; }
+.priority-high { background: #ffe1e2; color: #a22334; }
+.priority-medium { background: #fff0c2; color: #755211; }
+.priority-low { background: #d8f4e4; color: #176340; }
+.required { color: #b32235; }
+.backlog-list { max-height: 675px; }
+.story-description { margin-top: 12px; padding-top: 12px; border-top: 1px solid #c3e4f2; overflow-wrap: anywhere; }
+.story-buttons button { min-width: 88px; padding: 9px 10px; }
+.empty-state { margin: 16px 0 0; background: #f4fbfe; border: 1px dashed #80c2de; border-radius: 12px; padding: 18px; line-height: 1.4; }
+footer { text-align: center; color: #305c70; font-size: .9rem; margin-top: 30px; }
+
+@media (max-width: 760px) {
+  .forms-container { grid-template-columns: 1fr; }
+  .card { padding: 18px; }
+  .app-container { margin: 14px auto; }
+  .item-list { max-height: none; }
+}

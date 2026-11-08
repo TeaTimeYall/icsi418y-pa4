@@ -1,0 +1,21 @@
+{
+  "name": "icsi418y-pa4",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Express and MongoDB API for icsi418y-pa4",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node seed-pa4.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "mongodb": "^7.7.0"
+  }
+}
